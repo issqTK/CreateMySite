@@ -7,11 +7,7 @@ use Inertia\Inertia;
 
 class OrderController extends Controller
 {
-    public function showOrder()
-    {
-        return Inertia::render('Order', [
-            // Pass any data needed by the component here, e.g.,
-            'websiteTypes' => ['Portfolio', 'E-commerce', 'Blog', 'Corporate', 'Landing Page']
-        ]);
+    public function index($serviceSlug) {
+        return Inertia::render('Order/Index', ['slug' => $serviceSlug]);
     }
 }

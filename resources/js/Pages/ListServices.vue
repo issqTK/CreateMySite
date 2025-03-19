@@ -14,7 +14,14 @@ let observer;
 
 const handleIntersection = (entries) => {
     entries.forEach((entry) => {
-        if (entry.isIntersecting) visibleCards[entry.target.dataset.id] = true;
+        const cardID = entry.target.dataset.id;
+
+        if (entry.isIntersecting) 
+            visibleCards[cardID] = true;
+        else {
+            setTimeout(() => { visibleCards[cardID] = false }, 100);
+        }
+        
     });
 };
 
@@ -31,6 +38,7 @@ onMounted(() => {
         const element = document.querySelector(`[data-id='${service.id}']`);
         if (element) observer.observe(element);
     });
+
 });
 
 onBeforeUnmount(() => {
@@ -52,7 +60,7 @@ onBeforeUnmount(() => {
         </h2>
 
         <div
-            class="grid md:grid-cols-2 lg:grid-cols-3 gap-9 md:gap-6 lg:gap-12 overflow-hidden"
+            class="grid md:grid-cols-2 lg:grid-cols-3 justify-center gap-9 md:gap-6 lg:gap-12"
         >
             <div
                 class="flex flex-col justify-between gap-6 md:gap-9 p-7 md:mx-auto w-full max-w-[380px] min-h-96 bg-white/85 rounded-lg shadow-lg transition-all duration-500 translate-y-12 opacity-0"
