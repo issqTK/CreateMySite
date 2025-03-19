@@ -136,7 +136,55 @@ onMounted(() => {});
       </form>
     </div>
   </section>
+  <!-- 
+  <div>
+                <label for="designPreferences" class="block text-sm font-medium text-gray-700">Design Preferences (Optional)</label>
+                <textarea
+                    id="designPreferences"
+                    v-model="form.designPreferences"
+                    rows="2"
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Specify your design preferences"
+                ></textarea>
+                </div>
+        
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label for="deadline" class="block text-sm font-medium text-gray-700">Deadline</label>
+                    <input
+                    type="date"
+                    id="deadline"
+                    v-model="form.deadline"
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                    />
+                </div>
+        
+                <div>
+                    <label for="budget" class="block text-sm font-medium text-gray-700">Budget (in USD)</label>
+                    <input
+                    type="number"
+                    id="budget"
+                    v-model="form.budget"
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Enter your budget"
+                    required
+                    />
+                </div>
+                </div>
+        
+                <div>
+                <label for="file" class="block text-sm font-medium text-gray-700">Upload Relevant Files</label>
+                <input
+                    type="file"
+                    id="file"
+                    @change="handleFileUpload"
+                    class="mt-1 block w-full text-sm text-gray-700 file:mr-4 file:py-2 file:px-4 file:border file:border-gray-300 file:text-gray-700 file:rounded-md file:bg-gray-100 hover:file:bg-gray-200"
+                />
+                </div>
+   -->
 </template>
+
 <style scoped>
 label {
   text-transform: uppercase;
